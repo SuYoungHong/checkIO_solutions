@@ -1,0 +1,25 @@
+# instructions
+
+What is your favourite day of the week? Check if it's the most frequent day of the week in the year.
+You are given a year as integer (e. g. 2001). You should return the most frequent day(s) of the week in that year. The
+result has to be a list of days sorted by the order of days in week (e. g. ['Monday', 'Tuesday']). Week starts with
+Monday.
+
+Input: Year as an int.
+Output: The list of most frequent days sorted by the order of days in week (from Monday to Sunday).
+Preconditions: Year is between 1 and 9999. Week starts with Monday.
+
+
+# okay, so only the first and last week of the year matter...
+# even if you weird months like skip years, the day of the week really doesn't matter
+
+# so I'll just check the first week of the year and the last week of the year...
+# I just need to get [jan1 to Sun] + [Mon to Dec 31] into same list, and then do a simple
+# count of each day...
+
+# then I'll need a way to sort ties to sort by day of week... so maybe keep everything in a
+# tuple, ('Monday',1),('Tuesday,2), etc. and sort by index...
+
+# but how do you determine what the days look like for that year? like what the first week
+# and last week even look like?
+
